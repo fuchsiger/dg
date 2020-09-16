@@ -1,0 +1,100 @@
+step: 2
+name: dg
+docker_image: dg:latest
+framework: !!python/object/apply:mic.constants.Framework
+- !!python/tuple
+  - general
+  - mintproject/generic:latest
+container_name: dg_5f2ab216
+configs:
+  file_cio:
+    path: inputs/file.cio
+    format: cio
+  basins_bsn:
+    path: inputs/basins.bsn
+    format: bsn
+# Add a default value and type to any automatically generated parameters
+# It is also recommended you add a descriptions to your parameters
+# Add a default value and type to any automatically generated parameters
+# It is also recommended you add a descriptions to your parameters
+parameters:
+  SFTMP:
+    default_value: 0
+    description: ''
+    type: ''
+  SMTMP:
+    default_value: 0
+    description: ''
+    type: ''
+  SMFMX:
+    default_value: 5
+    description: ''
+    type: ''
+  SMFMN:
+    default_value: 5
+    description: ''
+    type: ''
+  TIMP:
+    default_value: 0.5
+    description: ''
+    type: ''
+  YEARS:
+    name: YEARS
+    default_value: 7
+    type: int
+    description: ''
+  START_YEAR:
+    default_value: 2010
+    description: ''
+    type: ''
+inputs:
+  inputs_zip:
+    path: inputs.zip
+    format: zip
+code_files:
+  swat670:
+    path: inputs/swat670
+    format: ''
+outputs:
+  output_std:
+    path: inputs/output.std
+    format: std
+  output_hru:
+    path: inputs/output.hru
+    format: hru
+  output_rsv:
+    path: inputs/output.rsv
+    format: rsv
+  watout_dat:
+    path: inputs/watout.dat
+    format: dat
+  output_rch:
+    path: inputs/output.rch
+    format: rch
+  chan_deg:
+    path: inputs/chan.deg
+    format: deg
+  hyd_out:
+    path: inputs/hyd.out
+    format: out
+  fin_fin:
+    path: inputs/fin.fin
+    format: fin
+  input_std:
+    path: inputs/input.std
+    format: std
+  output_sed:
+    path: inputs/output.sed
+    format: sed
+  bmp-sedfil_out:
+    path: inputs/bmp-sedfil.out
+    format: out
+  output_sub:
+    path: inputs/output.sub
+    format: sub
+  septic_out:
+    path: inputs/septic.out
+    format: out
+  bmp-ri_out:
+    path: inputs/bmp-ri.out
+    format: out
